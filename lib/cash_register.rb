@@ -11,7 +11,7 @@ class CashRegister
   end
 
   def add_item(name,price,quantity=1)
-    
+
     @items << [name,price,quantity]
 
     @total += price * quantity
@@ -34,10 +34,11 @@ class CashRegister
   def  items
     result = []
     @items.each do |x|
-      x[2].times do 
+      x[2].times do
         result << x[0]
       end
     end
+    result
   end
 
   def void_last_transaction
